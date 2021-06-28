@@ -1,7 +1,11 @@
 package com.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface DoencasRepository extends JpaRepository<T, ID> {
+import com.domain.Doencas;
+
+@Repository
+public interface DoencasRepository extends JpaRepository<Doencas, Integer> {
 
 }

@@ -1,7 +1,11 @@
 package com.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface AnamneseRepository extends JpaRepository<T, ID> {
+import com.domain.Anamnese;
+
+@Repository
+public interface AnamneseRepository extends JpaRepository<Anamnese, Integer> {
 
 }
