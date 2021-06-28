@@ -14,7 +14,7 @@ public class ExameService {
 
 	@Autowired
 	ExameRepository repository;
-	
+
 	public List<Exame> todos() {
 		return repository.findAll();
 	}
@@ -24,7 +24,7 @@ public class ExameService {
 	}
 
 	public Exame busca(Integer id) {
-		return repository.findById(id).orElseThrow(()-> new ExameNaoEncontradoException(id));
+		return repository.findById(id).orElseThrow(() -> new ExameNaoEncontradoException(id));
 	}
 
 	public Exame atualiza(Exame exame, Integer id) {

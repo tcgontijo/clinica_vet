@@ -11,6 +11,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import lombok.Data;
 
 @Entity
@@ -28,6 +30,7 @@ public class Consulta implements Serializable {
 	private String historico;
 
 	@NotEmpty(message = "O campo Animal é obrigatório!")
+	@JsonBackReference
 	@ManyToOne
 	private Animal animal;
 

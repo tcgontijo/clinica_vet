@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import lombok.Data;
 
 @Entity
@@ -32,9 +34,11 @@ public class Animal implements Serializable {
 	private Date dataCadastro;
 	private Integer estado;
 
+	@JsonManagedReference
 	@OneToMany(mappedBy = "animal")
 	private List<Consulta> consultas = new ArrayList<>();
 	
+	@JsonManagedReference
 	@OneToMany(mappedBy = "animal")
 	private List<Exame> exames = new ArrayList<>();
 
