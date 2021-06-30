@@ -1,7 +1,6 @@
 package com.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +23,7 @@ public class Consulta implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private Date data;
+	private String data;
 	private String observacoes;
 	private String queixa;
 	private String historico;

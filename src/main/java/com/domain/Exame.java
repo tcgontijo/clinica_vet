@@ -1,7 +1,6 @@
 package com.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,7 +32,7 @@ public class Exame implements Serializable {
 	private Boolean potassio;
 	private String ultrassom;
 	private String radiografia;
-	private Date data;
+	private String data;
 
 	@NotBlank(message = "O campo Animal é obrigatório!")
 	@JsonBackReference

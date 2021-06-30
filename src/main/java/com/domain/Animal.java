@@ -2,7 +2,6 @@ package com.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -30,8 +29,8 @@ public class Animal implements Serializable {
 	private String pelagem;
 	private Integer peso;
 	private Integer tipo;
-	private Date dataNascimento;
-	private Date dataCadastro;
+	private String dataNascimento;
+	private String dataCadastro;
 	private Integer estado;
 
 	@JsonManagedReference
