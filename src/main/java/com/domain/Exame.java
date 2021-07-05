@@ -34,7 +34,7 @@ public class Exame implements Serializable {
 	private String radiografia;
 	private String data;
 
-	@NotBlank(message = "O campo Animal é obrigatório!")
+	//@NotBlank(message = "O campo Animal é obrigatório!")
 	@JsonBackReference
 	@ManyToOne
 	private Animal animal;
