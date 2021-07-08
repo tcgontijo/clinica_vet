@@ -22,7 +22,7 @@ public class DoencaAdvice {
 	
 	@ResponseBody
 	@ExceptionHandler(SQLIntegrityConstraintViolationException.class)
-	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
 	String DoencaConstaEmAnamnese() {
 		return "Não é possível esta doença! Ela já foi lançada em uma Anamnese.";
 	}
